@@ -1,0 +1,12 @@
+extends ../layout_no_header_footer
+
+block content
+  form.login-block.col-md-offset-4.col-md-4.block(method='POST')
+    .page-header
+    input(type='hidden', name='_csrf', value=_csrf)
+    img(src='/images/logo1.png')
+    .box-inside
+      .editor
+          input(type='email', name='email', id='email', placeholder='Email', autofocus, required)
+      button.btn(type='submit')
+          | Reset Password

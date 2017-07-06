@@ -1,0 +1,19 @@
+extends ../layout_no_header_footer
+
+block content
+  form.login-block.validate(method='POST')
+    .page-header
+    input(type='hidden', name='_csrf', value=_csrf)
+    img(src='/images/logo1.png')
+    .box-inside
+      .editor
+          input(type='email', name='email', id='email', placeholder='Email', autofocus, required)
+      .editor
+          input(type='password', name='password', id='password', placeholder='Password', required)
+      .remember
+          input(type='checkbox', name='remember', id='remember')
+          |Remember
+      button.btn.submit(type='submit')
+          | Login
+      .link
+          a(href='/forgot') Forgot your password?

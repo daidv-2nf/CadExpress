@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixin";
+
+@import "../../lib/font-awesome/font-awesome";
+
+// Scaffolding
+// -------------------------
+* {
+  box-sizing: border-box;
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-normal;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+//Common
+.block {
+  @include border-radius(50px);
+  background: $background-color;
+}

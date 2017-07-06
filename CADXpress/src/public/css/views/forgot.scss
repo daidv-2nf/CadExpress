@@ -1,0 +1,94 @@
+@import "../themes/default/default";
+
+body {
+    background: $background-color1;
+}
+.login-block {
+    margin: 0 auto;
+    width: 462px;
+    padding: 40px 60px 86px 60px;
+    border: 1px solid #a0a1a1;
+    margin-top: calc(50% - 275px);
+}
+
+.login-block img {
+    width: 100%;
+}
+
+.box-inside {
+    width: 68%;
+    margin: 0 auto;
+    margin-top: 55px;
+}
+
+.remember {
+    @include col-5;
+    @include center;
+    @include clearfix;
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+.editor {
+    @include col-10;
+    & input {
+        @include col-10;
+        border: none;
+        border-bottom: 1px solid $border-color;
+        padding: 3px 5px;
+        margin-bottom: 15px;
+        @include transition(border-bottom-color .2s ease-out);
+        &:focus {
+            border-bottom-color: $border-high-light;
+            outline: none;
+            @include transition(border-bottom-color .8s ease-in);
+        }
+    }
+}
+.btn {
+    @include col-10;
+    background: $button-background-color;
+    @include border-radius(5px);
+    border: none;
+    padding: 10px;
+    color: $color-invert;
+    cursor: pointer;
+    @include transition(box-shadow .8s ease-in);
+    &:hover {
+        @include box-shadow(1px 1px 0 rgba(0,0,0, .5));
+        @include transition(box-shadow .2s ease-out);
+    }
+}
+.link {
+    margin-top: 20px;
+    text-align: center;
+    & a {
+        color: $button-background-color;
+        text-decoration: none;
+    }
+}
+
+@media all {
+    @media (max-width: $mobile-l) {
+        .login-block {
+            margin: 0 auto;
+            width: 99%;
+            padding: 35px 45px;
+            border: 1px solid #a0a1a1;
+        }
+
+        .box-inside {
+            width: 80%;
+        }
+    }
+    @media (max-width: $mobile-m) {
+        .login-block {
+            padding: 35px 36px;
+        }
+    }
+    @media (max-width: $mobile-s) {
+        .box-inside {
+            width: 100%;
+        }
+    }
+}
